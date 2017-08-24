@@ -28,6 +28,7 @@ ref (https://devcenter.heroku.com/articles/heroku-cli#debian-ubuntu)
 web: gunicorn learnheroku.wsgi --log-file -
 
 * create app.json with this inside
+
 {
   "name": "learnheroku",
   "description": "My heroku learning",
