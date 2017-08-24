@@ -6,7 +6,7 @@ go to cloud9 console
 ```
 wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
 ```
-  ref (https://devcenter.heroku.com/articles/heroku-cli#debian-ubuntu)
+> ref (https://devcenter.heroku.com/articles/heroku-cli#debian-ubuntu)
 * run following commands
 ```
 sudo pip install virtualenv
@@ -45,5 +45,11 @@ web: gunicorn learnheroku.wsgi --log-file -
   }
 }
 ```
-
+* prepare static folder for post-run as define with scripts in app.json when deploy on heroku
+```
+cd learnheroku
+mkdir static
+echo ' ' > humans.txt
+```
+> humans.txt is just for make folder not empty then git will take it
 
