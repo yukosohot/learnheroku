@@ -7,6 +7,10 @@ go to cloud9 console
 wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
 ```
 > ref (https://devcenter.heroku.com/articles/heroku-cli#debian-ubuntu)
+* login to heroku
+```
+heroku login
+```
 * run following commands
 ```
 sudo pip install virtualenv
@@ -107,4 +111,13 @@ git add .
 git commit -m "init"
 git remote add origin https://github.com/yukosohot/learnheroku.git
 git push -u origin master
+```
+## heroku create
+* create heroku app
+```
+heroku create
+```
+* deploy
+```
+git push heroku master
 ```
