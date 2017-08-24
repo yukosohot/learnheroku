@@ -84,6 +84,16 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 ```
+* update database configuration with $DATABASE_URL.
+```python
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
+DATABASES['default']['TEST'] = {'NAME': DATABASES['default']['NAME']}
+```
+* Honor the 'X-Forwarded-Proto' header for request.is_secure()
+```python
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+```
 * update static folder
 ```python
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
