@@ -29,7 +29,7 @@ web: gunicorn learnheroku.wsgi --log-file -
 
 * create app.json with this inside
 
-```json
+```javascript
 {
   "name": "learnheroku",
   "description": "My heroku learning",
