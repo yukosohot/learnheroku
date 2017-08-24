@@ -1,5 +1,7 @@
 # learnheroku
 use cloud9 (ide.c9.io) as learning environment
+
+for ref check this https://devcenter.heroku.com/articles/getting-started-with-python#introduction
 ## set up
 go to cloud9 console
 * update heroku-cli by using
