@@ -130,15 +130,21 @@ heroku create
 * deploy
 ```
 git push heroku master
+heroku run python manage.py migrate
+heroku run python manage.py createsuperuser
 ```
-## heroku env
+## heroku env for production
+* go to menu Settings in app console on heroku web site and find Config Vars
+## heroku env for local
 * create .env file with this inside (.env file is for local environment)
 ```
 DATABASE_URL=postgres://xghkiuyljrhvgu:58264795da043da8313c703535f80182470bb27408d32c2637cf158f58121a1f@ec2-54-163-237-25.compute-1.amazonaws.com:5432/d3vuo519qgga3h
 ```
-## heroku run
-* to run remote command
+## run web on local for test
+* to test the app
 ```
-heroku run python manage.py createsuperuser
+heroku local
+or
+heroku local web -f Procfile.windows
 ```
 
