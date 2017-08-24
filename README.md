@@ -5,9 +5,9 @@ use cloud9 (ide.c9.io) as learning environment
 go to cloud9 console
 
 * update heroku-cli by using
-
+```
 wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
-
+```
 ref (https://devcenter.heroku.com/articles/heroku-cli#debian-ubuntu)
 
 * sudo pip install virtualenv
