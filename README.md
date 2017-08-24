@@ -53,6 +53,7 @@ cd static
 echo ' ' > humans.txt
 ```
 > static folder must be beside settings.py
+
 > humans.txt is just for make folder not empty then git will take it
 ## edit django settings.py
 * import dj_database_url
@@ -90,4 +91,20 @@ STATICFILES_DIRS = (
 )
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+```
+## test run local
+```
+./manage.py migrate
+./manage.py createsuperuser
+./manage.py runserver 0.0.0.0:8080
+```
+## git init
+* create empty project in github
+* run commands
+```
+git init
+git add .
+git commit -m "init"
+git remote add origin https://github.com/yukosohot/learnheroku.git
+git push -u origin master
 ```
